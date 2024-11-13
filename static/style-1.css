@@ -1,0 +1,526 @@
+body {
+    font-family: 'Helvetica', sans-serif;
+    color: #333;
+    padding: 0;
+    margin: 0;
+    width:100%;
+    height: 100%;
+    overflow-x: hidden !important; 
+}
+.container-fluid {
+    background-color: #ae724b;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.btn-custom {
+    background-color: #28a745;
+    color: white;
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: blink 2s infinite;
+}
+
+.btn-custom:hover {
+    background-color: darkgreen;
+    animation: none;
+}
+
+nav {
+    background-color: #3c0404;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar {
+    background-color: #3c0404    ;
+
+}
+
+nav .contact-icon {
+    width: 50px;
+}
+nav img {
+    width: 100px;
+    border-radius: 50%;
+}
+.logo {
+    box-sizing: border-box;
+    height:170px;
+    width:auto;
+}
+.container {
+    padding: 20px 15px;
+    text-align: center;
+}
+
+.container img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    margin-bottom: 20px;
+
+}
+.fundo {
+    background-color: #3c0404 ;
+    color:white;
+    padding: 10px 0px;
+}
+h1 {
+    font-size: 32px;
+    color: #3c0404;
+}
+
+.areas-de-atuacao {
+    margin-top: 40px;
+}
+
+.atuacao-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.atuacao-item {
+    display:grid;
+    text-align: center;
+    padding: 20px;
+    width: 250px;
+    height: 100px;
+    place-items:center;
+    text-align: center;
+    background-color: #3c0404 ;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+
+
+.atuacao-item img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.atuacao-item h5 {
+    font-size: 22px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #3c0404;
+    color: white;
+    padding: 30px 0;
+}
+
+footer .contact-icon {
+    width: 30px;
+}
+
+footer .text-number, footer .endereco, footer .email-text {
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+    .container img {
+        width: 200px;
+    }
+    .btn-custom {
+        font-size: 0.8rem;
+    }
+}
+
+nav img {
+    max-width: 100%; /* Garante que a imagem não exceda o container */
+}
+
+nav .contact-icon {
+    max-width: 100%; /* Garante que o ícone não cause overflow */
+}
+
+.servico-item {
+    margin-bottom: 5px;
+    text-align: left;
+    padding: 10px;
+    background-color: #683c24;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin:10px;
+}
+
+.servico-item h5 {
+    margin: 0;
+    font-size: 22px;
+    color: white !important;
+    cursor: pointer;
+}
+
+.servico-item .collapse {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.servico-item button {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 0;
+}
+
+.servico-item button:focus {
+    outline: none;
+}
+
+.servico-item h5::after {
+    content: '\25BC'; /* Setinha para indicar que pode ser expandido */
+    float: right;
+    font-size: 16px;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+.servico-item button[aria-expanded="true"] h5::after {
+    transform: rotate(180deg); /* Rotaciona a setinha para cima ao expandir */
+}
+
+.collapse p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.collapse ul {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+
+* {
+    box-sizing: border-box; /* Garante que o padding e a borda estejam inclusos no cálculo da largura */
+}
+
+.nav-item a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    background-color: #333;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    
+}
+.nav-item a:hover {
+    color: rgb(193, 185, 231);
+}
+
+.navbar-toggler {
+    background-color: #bbcbcb !important;
+}
+
+.nav-x {
+    position: absolute; left: 50%; transform: translateX(-50%);
+}
+
+.servico-item h5 {
+    position: relative; /* Permite o uso de 'top' e 'right' */
+    margin: 0;
+    font-size: 22px;
+    color: #3c0404;
+    cursor: pointer;
+}
+
+.servico-item h5::after {
+    content: '\25BC'; /* Setinha para indicar que pode ser expandido */
+    position: absolute;
+    top: 0; /* Ajusta a posição da setinha no topo */
+    right: 0; /* Coloca a setinha no canto direito */
+    font-size: 16px;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+.servico-item button[aria-expanded="true"] h5::after {
+    transform: rotate(180deg); /* Rotaciona a setinha para cima quando expandido */
+}
+.servico-item button {
+    width: 100%; /* Ou uma largura maior */
+    white-space: normal; /* Permite a quebra de linha dentro do botão */
+}
+.servico-item h5 {
+    white-space: normal; /* Faz o texto quebrar em várias linhas se necessário */
+}
+.servico-item button {
+    padding-right: 10px; /* Aumenta o espaço à direita para evitar que o ícone se sobreponha ao texto */
+}
+
+@keyframes blink {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0.5;
+    }
+}
+
+.botao-n {
+    background-color: #683c24;
+    color: white;
+    width: 33%;
+    border: none;
+    padding: 10px;
+    font-size: 1.4rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    animation: blink 2s infinite; /* Adiciona a animação */
+}
+
+.botao-n:hover {
+    background-color: #3c0404;
+}
+@media (max-width:359.98px) {
+    .servico-item h5::after {
+        font-size: 8px;
+    }
+    .servico-item button {
+        padding-right: 1px; /* Aumenta o espaço à direita para evitar que o ícone se sobreponha ao texto */
+    }
+    .logo {
+        width:100px;
+        height:auto;
+    }
+    .btn-custom {
+        font-size:0.6rem;
+        padding:5px;
+    }
+    .fundo h1 {
+        font-size: 1.1rem;
+    }
+    .texto-descricao {
+        font-size: 0.45rem;
+    }
+    .servico-item h5 {
+        font-size: 0.55rem;
+    }
+    .servico-item ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .collapse p, .collapse ul {
+        font-size: 0.5rem;
+        padding-right: 0px;
+    }
+
+    .atuacao-item {
+        margin-left: 0px;
+        padding: 8px !important;
+        height: auto !important;
+    }
+    
+    .atuacao-item h5 {
+        font-size: 0.9rem;
+        padding: 0px;
+    }
+
+    .container {
+        width: 100% !important;
+    }
+    
+    .servico-item {
+        padding: 0;
+        margin: 0;
+    }
+    .contact-icon{
+        height: 20px;
+        width: auto !important;
+    }
+.text-number, .email-text, .endereco {
+    font-size: 0.6rem !important ;
+}
+.botao-n {
+    padding: 0px;
+    font-size: 0.60rem; 
+}
+.container img {
+    width: 120px;
+}
+}
+
+@media (min-width: 360px) and (max-width:575.98px) {
+    .container img {
+        width: 120px;
+    }
+    .servico-item h5::after {
+        font-size: 11px;
+    }
+    .servico-item button {
+        padding-right: 1px; /* Aumenta o espaço à direita para evitar que o ícone se sobreponha ao texto */
+    }
+    .logo {
+        width:100px;
+        height:auto;
+    }
+    .btn-custom {
+        font-size:0.6rem;
+        padding:5px;
+    }
+    .fundo h1 {
+        font-size: 1.2rem;
+    }
+    .texto-descricao {
+        font-size: 0.8rem;
+    }
+    .servico-item h5 {
+        font-size: 0.65rem;
+    }
+    .servico-item ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    .collapse p, .collapse ul {
+        font-size: 0.6rem;
+        padding-right: 0px;
+    }
+
+    .atuacao-item {
+        margin-left: 0px;
+        padding: 10px !important;
+        height: auto !important;
+    }
+
+ .servico-item {
+        padding: 0;
+        margin: 0;
+    }   
+.atuacao-item h5 {
+    font-size: 1rem;
+    padding: 0px;
+}
+
+.text-number, .email-text, .endereco {
+    font-size: 0.65rem !important ;
+}
+
+footer {
+    padding: 10px;
+}
+.contact-icon{
+    height: 25px;
+    width: auto !important;
+
+}
+.botao-n {
+    padding: 0px;
+    font-size: 0.8rem; 
+}
+#endereco {
+    width: 300px;
+    height: 162.5px;
+}
+}
+@media (min-width: 360px) and (max-width:414.98px) {
+    .botao-n {
+        padding: 0px;
+        font-size: 0.70rem; 
+    }
+}
+@media (min-width: 576px) and (max-width:767.98px) {
+    .container img {
+        width: 160px;
+    }
+    .servico-item h5::after {
+        font-size: 11px;
+    }
+    .servico-item button {
+        padding-right: 1px;
+    }
+    .servico-item h5 {
+        font-size: 0.75rem;
+    }
+    .servico-item ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    .collapse p, .collapse ul {
+        font-size: 11px;
+        padding-right: 0px;
+    }
+    
+.atuacao-item h5 {
+    font-size: 0.9rem;
+    padding: 0px;
+}
+
+.text-number, .email-text, .endereco {
+    font-size: 0.70rem !important ;
+}
+.botao-n {
+    padding: 0px;
+    font-size: 0.85rem; 
+}
+}
+
+
+@media (min-width: 768px) and (max-width:992px) {
+    .servico-item h5::after {
+        font-size: 15px;
+    }
+    .servico-item button {
+        padding-right: 0.8px; /* Aumenta o espaço à direita para evitar que o ícone se sobreponha ao texto */
+    }
+    .servico-item h5 {
+        font-size: 1rem;
+    }
+    .servico-item ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    .collapse p, .collapse ul {
+        font-size: 14px;
+
+    }
+    .text-number, .email-text, .endereco {
+        font-size: 0.7rem !important ;
+    }
+.atuacao-item h5 {
+    font-size: 20px;
+}
+.botao-n {
+    padding: 8px;
+    font-size: 1.1rem; 
+}
+}
+@media (min-width: 992.02px) and (max-width:1200px) {
+    
+    /* .text-number, .email-text, .endereco {
+        font-size: 0.6rem !important ;
+    } */
+}
